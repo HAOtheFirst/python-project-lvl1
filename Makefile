@@ -1,15 +1,16 @@
-install: #  Environment initialization
+install:
 	poetry install
 
-brain-games: # Welcome
+brain-games:
 	poetry run brain-games
 
-build: # Project build
+build: # awdaw d
 	poetry build
 
-publish: # Publish Project
+publish:
 	poetry publish --dry-run
 
-package-install: # installing a project from the operating system
+package-install:
 	python3 -m pip install --user dist/*.whl
 
+.PHONY: install build
