@@ -4,10 +4,13 @@ install:
 brain-games:
 	poetry run brain-games
 
-build: # awdaw d
+brain-even:
+	poetry run brain-even
+
+build:
 	poetry build
 
-publish:
+publish: build
 	poetry publish --dry-run
 
 package-install:
