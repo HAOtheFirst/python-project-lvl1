@@ -18,7 +18,7 @@ def game_calc():
 
         correct_answer = eval(f'{number_one} {operation} {number_two}')
 
-        answer = int(prompt.string('Your answer: '))
+        answer = prompt.real('Your answer: ')
 
         if answer == correct_answer:
             print('Correct!')
