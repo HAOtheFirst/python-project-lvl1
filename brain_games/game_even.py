@@ -1,12 +1,12 @@
 #!/usr/bin/env python
+from .cli import welcome_user
 import random
 import prompt
 
 
 def game_even():
-    print('Welcome to the Brain Games!')
-    name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}!')
+
+    name = welcome_user()
     print('Answer "yes" if the number is even, otherwise answer "no".')
 
     i = 0
@@ -22,14 +22,13 @@ def game_even():
 
         answer = prompt.string('Your answer: ')
 
-        if answer == 'yes' and number % 2 == 0:
+        if (answer == correct_answer and number % 2 == 0) \
+                or (answer == correct_answer and number % 2 != 0):
             print('Correct!')
             i += 1
-        elif answer == 'no' and number % 2 != 0:
-            print('Correct!')
-            i += 1
-        elif i == 2:
-            print(f'Congratulations, {name}!')
         else:
-            print(f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
-            i = 4
+            return print(f"'{answer}' is wrong answer ;(. Correct answer was "
+                         f"'{correct_answer}'.'\n Let's try again, {name}!")
+
+    if i == 3:
+        print(f'Congratulations, {name}!')

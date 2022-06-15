@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-from ..cli import welcome_user
 from ..game_even import game_even
 
 
