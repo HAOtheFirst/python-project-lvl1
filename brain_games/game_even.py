@@ -28,7 +28,7 @@ def game_even():
         elif answer == 'no' and number % 2 != 0:
             print('Correct!')
             i += 1
-        elif i == 3:
+        elif i == 2:
             print(f'Congratulations, {name}!')
         else:
             print(f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
