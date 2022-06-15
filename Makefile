@@ -7,6 +7,9 @@ brain-games:
 brain-even:
 	poetry run brain-even
 
+brain-calc:
+	poetry run brain-calc
+
 build:
 	poetry build
 
@@ -16,4 +19,4 @@ publish: build
 package-install:
 	python3 -m pip install --user dist/*.whl
 
-.PHONY: install build brain-even
+.PHONY: install build brain-even brain-calc
