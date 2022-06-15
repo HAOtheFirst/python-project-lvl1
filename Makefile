@@ -16,4 +16,4 @@ publish: build
 package-install:
 	python3 -m pip install --user dist/*.whl
 
-.PHONY: install build
+.PHONY: install build brain-even
