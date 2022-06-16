@@ -19,4 +19,7 @@ publish: build
 package-install:
 	python3 -m pip install --user dist/*.whl
 
-.PHONY: install build brain-even brain-calc
+lint:
+	poetry run flake8 brain_games
+
+.PHONY: install build brain-even brain-cal clint
