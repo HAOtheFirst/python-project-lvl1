@@ -13,6 +13,9 @@ brain-calc:
 brain-gcd:
 	poetry run brain-gcd
 
+brain-progression:
+	poetry run brain-progression
+
 build:
 	poetry build
 
@@ -25,4 +28,4 @@ package-install:
 lint:
 	poetry run flake8 brain_games
 
-.PHONY: install build brain-even brain-cal clint
+.PHONY: install build brain-even brain-cal clint progression
