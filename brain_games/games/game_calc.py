@@ -1,4 +1,4 @@
-from brain_games.cli import welcome_user
+from brain_games.cli import welcome_user, is_done
 import random
 import prompt
 
@@ -20,12 +20,8 @@ def game_calc():
 
         answer = prompt.real('Your answer: ')
 
-        if answer == correct_answer:
-            print('Correct!')
+        if is_done(answer, correct_answer, name) is True:
             i += 1
-        else:
-            return print(f"'{answer}' is wrong answer ;(. Correct answer was "
-                         f"'{correct_answer}'.'\n Let's try again, {name}!")
 
     if i == 3:
         print(f'Congratulations, {name}!')
