@@ -9,6 +9,16 @@ def welcome_user():
     return name
 
 
+def start_game(func, text, game_count):
+    back_func = func(text)
+    if game_count == 0:
+        return print(f'Congratulations, {text}!')
+    elif back_func is True:
+        return start_game(func, text, game_count - 1)
+    else:
+        return
+
+
 def is_done(answer, correct_answer, name):
     if answer == correct_answer:
         print('Correct!')
