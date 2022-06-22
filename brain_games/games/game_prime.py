@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from ..cli import welcome_user
+from ..cli import welcome_user, get_prime
 import random
 import prompt
 
@@ -8,18 +8,11 @@ def game_prime():
     name = welcome_user()
     print('Answer "yes" if given number is prime. Otherwise answer "no".')
 
-    max_range = 500
-    prime_list = []
-
-    for i in range(1, max_range):
-        for j in range(2, i):
-            if i % j == 0:
-                break
-        else:
-            prime_list.append(i)
+    get_prime(500)
 
     i = 0
 
+    prime_list, max_range = get_prime(500)
     while i < 3:
         number = random.randint(1, max_range)
         print(f'Question: {number}')
@@ -29,7 +22,6 @@ def game_prime():
             current_answer = 'yes'
         else:
             current_answer = 'no'
-            print(current_answer)
 
         if answer == current_answer:
             print('Correct!')

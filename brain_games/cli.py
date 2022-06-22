@@ -19,5 +19,16 @@ def is_done(answer, correct_answer, name):
         return False
 
 
+def get_prime(max_range):
+    prime_list = []
+    for i in range(1, max_range):
+        for j in range(2, i):
+            if i % j == 0:
+                break
+        else:
+            prime_list.append(i)
+    return prime_list, max_range
+
+
 if __name__ == "__main__":
     welcome_user()
