@@ -19,7 +19,7 @@ def is_done(answer, correct_answer, name):
         return False
 
 
-def get_prime(max_range):
+def get_prime_list(max_range):
     prime_list = []
     for i in range(1, max_range):
         for j in range(2, i):
