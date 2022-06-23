@@ -2,7 +2,6 @@
 from ..cli import welcome_user, get_prime_list, is_done, start_game
 import random
 import prompt
-import time
 
 
 def game_prime():
