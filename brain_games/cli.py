@@ -29,6 +29,12 @@ def is_done(answer, correct_answer, name):
         return False
 
 
+def find_gcd(first_num, second_num):
+    for i in range(min(first_num, second_num), 0, -1):
+        if (first_num % i == 0) and (second_num % i == 0):
+            return i
+
+
 # def is_even(number):
 #     if number % 2 == 0:
 #         return True
