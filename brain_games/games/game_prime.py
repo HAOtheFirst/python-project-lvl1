@@ -11,7 +11,7 @@ def game_prime():
 
 
 def prime(name):
-    prime_list, max_range = get_prime_list(100000)
+    prime_list, max_range = get_prime_list(500)
     number = random.randint(1, max_range)
     print(f'Question: {number}')
     answer = prompt.string('Your answer: ')
