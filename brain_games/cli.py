@@ -11,7 +11,7 @@ def welcome_user():
 
 def start_game(func, text, game_count):
     back_func = func(text)
-    if game_count == 0:
+    if game_count == 0 and back_func is True:
         return print(f'Congratulations, {text}!')
     elif back_func is True:
         return start_game(func, text, game_count - 1)
@@ -27,6 +27,13 @@ def is_done(answer, correct_answer, name):
         print(f"'{answer}' is wrong answer ;(. Correct answer was "
               f"'{correct_answer}'.'\n Let's try again, {name}!")
         return False
+
+
+# def is_even(number):
+#     if number % 2 == 0:
+#         return True
+#     else:
+#         return False
 
 
 def get_prime_list(max_range):
