@@ -25,7 +25,8 @@ def is_done(answer, correct_answer, name):
         return True
     else:
         print(f"'{answer}' is wrong answer ;(. Correct answer was "
-              f"'{correct_answer}'.'\n Let's try again, {name}!")
+              f"'{correct_answer}'.'")
+        print(f" Let's try again, {name}!")
         return False
 
 
